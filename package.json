@@ -1,12 +1,12 @@
 {
-  "name": "hackathon2021",
+  "name": "doubtbottle",
   "version": "1.0.0",
   "description": "A doubt clearing app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Pranaw and Rahul",
+  "author": "Anshul Gharde, Deepak Agarwal, Diya Pancholi, Mayank Chauhan and Patare Abhishek Sanjay",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
