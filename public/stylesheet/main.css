@@ -18,12 +18,12 @@
 
 .my-link{
     text-decoration: none;
-    color: #000 !important;
+    color: #fff !important;
     display: inline-block;
 }
 
 .myNav{
-    background-color: #ffe326 !important;
+    background-color: #3d5a80 !important;
 }
 
 .my-link::after{
