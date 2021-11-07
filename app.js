@@ -104,7 +104,7 @@ app.post('/discussions/:id/addtobookmark', isLoggedIn, function (req, res) {
                     currentUser.save();
                     console.log(currentUser.questionbookmarkedbyme);
                     req.flash("success", "Successfully added to bookmarks");
-                    res.render("discussion/show", { discussion: foundDiscussion, check: true });
+                    res.render("discussion/show", { discussion: foundDiscussion, check: true ,currentUser });
                 }
             })
         }

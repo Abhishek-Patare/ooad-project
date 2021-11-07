@@ -29,7 +29,7 @@
             <form action="/discussions/<%=discussion.id%>/comment/<%=comment.id%>/like" method="post">
                 <button class=" likeB border-0" id="likeButton" discussionID="<%=discussion.id%>"
                     commentID="<%=comment.id%>" type="submit" style="background: #f3f5f7;">
-                    <% if(comment.likedby.includes(user)){%>
+                    <% if(comment.likedby.includes(currentUser)){%>
                         <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-heart-fill"
                             viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />

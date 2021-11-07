@@ -121,7 +121,10 @@
 
 
                 <% discussion.comments.forEach(function(comment){%>
-                    <%-include('./../partials/commentCard',{discussion, comment, user})%>
+                    <%console.log('========================  ERROR =======================')%>
+                    <%console.log(currentUser)%>
+                    <%console.log('========================')%>
+                    <%-include('./../partials/commentCard',{discussion, comment, currentUser})%>
                 <%}); %>
 
 
