@@ -268,7 +268,6 @@ app.get("/courses/:courseName", isLoggedIn, async (req, res, next) => {
                     await Subject.exists({ subName: courseName }, function (err, result) {
                         if (!result) {
                             var subject = courseName;
-                            console.log("No Bug");
                             var newSubject = { subName: subject }
                             Subject.create(newSubject, function (err, newsubject) {
                                 if (err) {
@@ -282,7 +281,6 @@ app.get("/courses/:courseName", isLoggedIn, async (req, res, next) => {
                             })
                         }
                         else {
-                            console.log("BUGS");
                             Subject.find({ subName: courseName }).populate("questions").exec(function (err, subject) {
                                 if (err) {
                                     console.log("something went wrong");
