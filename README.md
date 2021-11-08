@@ -25,11 +25,10 @@ This is a platform where students can ask doubts, interact, and solve questions 
 
 ## How to run this app?
 
-1. Clone this repo
-2. Make sure that you have node js and mongodb installed on your system.
-3. Change the directory to the folder where you have cloned this repo.
-4. Run "npm i" in terminal.
-5. Run "node index.js" in terminal.
-6. Go to your browser and open "localhost:3000".
+1. Make sure that you have node js and mongodb installed on your system.
+2. Change the directory to the folder where you have cloned this repo.
+3. Run "npm i" in terminal.
+4. Run "node index.js" in terminal.
+5. Go to your browser and open "localhost:3000".
 
-NOTE: In this version, app is only implemented for freshies
+NOTE: In this version, app is only implemented for courses of first semister
