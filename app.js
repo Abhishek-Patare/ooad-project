@@ -11,7 +11,7 @@ const Subject = require("./models/subject")
 const Discussion = require("./models/discussion")
 const flash = require("connect-flash");
 const discussion = require("./models/discussion");
-mongoose.connect('mongodb://localhost:27017/database', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost:27017/db', { useNewUrlParser: true, useUnifiedTopology: true })
 const courseLists = require("./data/data.json");
 const user = require("./models/user");
 const AppError = require("./AppError");

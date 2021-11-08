@@ -57,17 +57,9 @@ body {
   }
 
 .myCourse:hover{
-    /* color: #1d3c45 !important; */
-    /* background-color: #fff1e1 !important; */
     color: #fff1e1 !important;
     background-color: #1d3c45 !important;
 }
-
-.btn-success1{
-    background-color: #293241;
-    
-}
-
 
 
 .askquestion{
