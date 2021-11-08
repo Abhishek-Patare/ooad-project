@@ -1,7 +1,7 @@
-# QnAi
+# DoubtBottles
 This is a platform where students can ask doubts, interact, and solve questions related to the courses being taught to them that semester.
 
-## Why QnAi?
+## Why DoubtBottles?
   * Ease of asking, 
   * If anyone is shy of asking question then question can be asked anonymously.
   * Streamlined focus

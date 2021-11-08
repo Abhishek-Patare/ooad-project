@@ -1,25 +1,25 @@
-<div class="card my-4 shadow questionCard" >
-    <div class="card-header" style="background-color: #b0e0e6" >
+<div class="card my-4 shadow questionCard">
+    <div class="card-header" style="background-color: #ef9188">
         <div class="d-flex align-items-center row justify-content-between">
             <div class="col-md-6 col-sm-12">
                 <p class="card-text mr-auto mb-0" style="text-transform: uppercase; font-size: 22px;">
                     <strong>
                         <%=question.topic%>
-                                
+
                     </strong>
                 </p>
             </div>
             <div class="col-md-6 col-sm-12 text-md-right text-sm-left">
                 <p class="card-text ml-auto ">
-                    <small class="text-muted">
+                    <small class="text-white">
                         <%if(question.anonymouslyAsked){%>
                             Anonymously asked on <%=question.time1%>
-                            <%} else if(question.author.id.equals(currentUser._id)){ %> 
+                                <%} else if(question.author.id.equals(currentUser._id)){ %>
                                     Asked by you on <%=question.time1%>
-                                
-                                <%} else{%>
-                                    Posted by <%=question.author.username%> on <%=question.time1%>
-                                            <%}%>
+
+                                        <%} else{%>
+                                            Posted by <%=question.author.username%> on <%=question.time1%>
+                                                    <%}%>
                     </small>
                 </p>
             </div>
@@ -30,23 +30,23 @@
             <%=question.question%>
         </h5>
     </div>
-    <div class="card-footer d-flex" >
+    <div class="card-footer d-flex" style="background-color: #b0e0e6;">
         <div>
-        <a href="/discussions/<%=question.id%>" class="btn btn-success1 mr-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-arrow-up-right-circle" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z" />
-            </svg>
-            <span class="d-none d-md-inline">View Entire Discussion</span></a>
+            <a href="/discussions/<%=question.id%>" class="btn btn-success mr-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-up-right-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z" />
+                </svg>
+                <span class="d-none d-md-inline">View Entire Discussion</span></a>
         </div>
         <div style="padding-top: 6px; padding-left:8px;">
             <%if(question.comments.length==1){%>
                 <span class="text-success">(<%=question.comments.length%> Answer)</span>
-            
+
                 <%} else if(question.comments.length>1){%>
                     <span class="text-success">(<%=question.comments.length%> Answers)</span>
-            
+
                     <%} else {%>
                         <span class="text-danger">(!Unanswered)</span>
                         <%}%>

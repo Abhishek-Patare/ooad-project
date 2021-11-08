@@ -11,7 +11,7 @@ const Subject = require("./models/subject")
 const Discussion = require("./models/discussion")
 const flash = require("connect-flash");
 const discussion = require("./models/discussion");
-mongoose.connect('mongodb://localhost:27017/hackathondb', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost:27017/database', { useNewUrlParser: true, useUnifiedTopology: true })
 const courseLists = require("./data/data.json");
 const user = require("./models/user");
 const AppError = require("./AppError");
@@ -43,7 +43,6 @@ app.use(function (req, res, next) {
 });
 
 app.get("/", function (req, res) {
-
     console.log("request for landing page");
     res.render("landing");
 });
@@ -429,7 +428,7 @@ app.get("/discussions/:id/edit", checkDiscussionOwnership, function (req, res) {
 })
 
 app.post("/discussions/:id/comment/:comment_id/like", isLoggedIn, function (req, res) {
-    console.log("rahul")
+    
     Comment.findById(req.params.comment_id, function (err, foundComment) {
         if (err) {
             res.redirect("/discussions/" + req.params.id);
@@ -642,7 +641,7 @@ function checkCommentOwnership(req, res, next) {
     if (req.isAuthenticated()) {
         Comment.findById(req.params.comment_id, function (err, foundComment) {
             if (err) {
-                req.flash("error", "Champground not found");
+                req.flash("error", "Comment not found");
                 res.redirect("back");
             } else {
                 //does the user owned comment
@@ -682,6 +681,6 @@ app.use((err, req, res, next) => {
 })
 
 app.listen(3000, function () {
-    console.log("Hackathon server has allready started!!");
+    console.log("server has allready started!!");
 });
 
